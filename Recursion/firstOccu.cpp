@@ -7,7 +7,7 @@ int f(int* arr, int n, int t, int i){
     }
     //recursive case
     if(arr[i] == t){
-        return 1;
+        return i;
     }
     return f(arr, n, t, i+1);
 }
@@ -15,7 +15,7 @@ int f(int* arr, int n, int t, int i){
 int main(){
     int n =5;
     int  arr[n]={10,20,30,20,30};
-    int t =20;
+    int t =30;
 
     cout<<f(arr, n, t, 0)<<endl;
     

@@ -7,7 +7,7 @@ int f(int* x, int t, int i){
     }
     //recursive case
     if(x[i]==t){
-        return 1;
+        return i;
     }
     return f(x, t, i-1); //same as friends ans
     
@@ -16,7 +16,7 @@ int f(int* x, int t, int i){
 int main(){
     int n = 5;
     int x[n]={10,20,30,20,30};
-    int t=10;
+    int t=20;
 
     cout<<f(x, t, n-1)<<endl;
     return 0;
