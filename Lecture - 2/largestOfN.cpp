@@ -14,6 +14,6 @@ int main(){
         }
         i++;
     }
-    cout<<lsf;
+    cout<<lsf<<endl;
     return 0;
 }
