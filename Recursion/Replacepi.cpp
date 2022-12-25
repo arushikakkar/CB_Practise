@@ -6,7 +6,10 @@ void replacePi(char* inp, int i){
     if(inp[i] =='\0'){
         return; //you have alrdy replace all pi to 3.14
     }
-    int j =i+2;
+    
+    //recursive case
+    if(inp[i] == 'p' and inp[i+1] == 'i'){
+        int j =i+2;
     while(inp[j] != '\0'){
         j++;
     }
@@ -14,22 +17,22 @@ void replacePi(char* inp, int i){
         inp[j+2] = inp[j];
         j--;
     }
-    //recursive case
-    if(inp[i] == 'p' and inp[i+1] == 'i'){
         inp[i] = '3';
         inp[i+1] = '.';
         inp[i+2] = '1';
         inp[i+3] = '4';
 
-        replacePi(inp, i+1);
+        replacePi(inp, i+4);
     
     }else{
+        replacePi(inp, i+1);
 
     }
 }
 
 int main(){
-    char inp[20] = "pip";
+    char inp[20] ;
+    cin>>inp;
 
     replacePi(inp, 0);
     cout<<inp<<endl;
